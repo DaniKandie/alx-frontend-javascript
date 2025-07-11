@@ -1,5 +1,3 @@
-// Task 1: Teacher Interface
-
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -9,12 +7,16 @@ interface Teacher {
   [propName: string]: any;
 }
 
-const teacher3: Teacher = {
-  firstName: 'dan',
-  lastName: 'kandi',
-  fullTimeEmployee: false,
-  location: 'kenya',
-  contract: false,
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
+  firstName: 'dani',
+  lastName: 'kandie',
+  location: 'Kenya',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
