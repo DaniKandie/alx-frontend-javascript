@@ -22,8 +22,8 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    static: "./dist"  // ✅ Fixed here too (if using webpack 5+)
-  },
+  contentBase: './dist'
+},
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
