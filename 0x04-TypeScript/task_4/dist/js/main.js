@@ -1,25 +1,21 @@
-/// <reference path="./subjects/Teacher.ts" />
-/// <reference path="./subjects/Subject.ts" />
-/// <reference path="./subjects/Cpp.ts" />
-/// <reference path="./subjects/React.ts" />
-/// <reference path="./subjects/Java.ts" />
 var cpp = new Subjects.Cpp();
-var react = new Subjects.React();
 var java = new Subjects.Java();
-var teacher = {
-    firstName: 'Dani',
+var react = new Subjects.React();
+var cTeacher = {
+    firstName: 'Daniel',
     lastName: 'Kandie',
-    experienceTeachingC: 5,
-    experienceTeachingReact: 0,
-    experienceTeachingJava: 2,
+    experienceTeachingC: 10,
 };
-cpp.setTeacher(teacher);
+console.log('C++');
+cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
-react.setTeacher(teacher);
-console.log(react.getRequirements());
-console.log(react.getAvailableTeacher());
-java.setTeacher(teacher);
+console.log('Java');
+java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
+console.log('React');
+react.setTeacher(cTeacher);
+console.log(react.getRequirements());
+console.log(react.getAvailableTeacher());
 //# sourceMappingURL=main.js.map

@@ -1,5 +1,3 @@
-/// <reference path="./Teacher.ts" />
-/// <reference path="./Subject.ts" />
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -24,7 +22,9 @@ var Subjects;
             return 'Here is the list of requirements for React';
         };
         React.prototype.getAvailableTeacher = function () {
-            if (!this.teacher.experienceTeachingReact || this.teacher.experienceTeachingReact <= 0) {
+            if (!this.teacher ||
+                this.teacher.experienceTeachingReact === undefined ||
+                this.teacher.experienceTeachingReact <= 0) {
                 return 'No available teacher';
             }
             return "Available Teacher: " + this.teacher.firstName;

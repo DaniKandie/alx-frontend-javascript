@@ -1,4 +1,3 @@
-/// <reference path="./Teacher.ts" />
 var Subjects;
 (function (Subjects) {
     var Subject = /** @class */ (function () {
